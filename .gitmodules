@@ -3,4 +3,4 @@
 	url = https://github.com/vankxr/liquid-dsp.git
 [submodule "software/mcu/deps/libfec"]
 	path = software/mcu/deps/libfec
-	url = https://github.com/quiet/libfec.git
+	url = https://github.com/vankxr/libfec.git

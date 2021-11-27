@@ -1,7 +1,7 @@
 # App Config
 ARM_LIBROOT ?= /mnt/e/Projetos/ARM/ARMdev/lib/
 DEVICEDIR = $(ARM_LIBROOT)/SiliconLabs.EFM32GG11B_DFP.5.8.10/Device/SiliconLabs/EFM32GG11B
-COREDIR = $(ARM_LIBROOT)/ARM.CMSIS.5.7.0/CMSIS
+COREDIR = $(ARM_LIBROOT)/ARM.CMSIS.5.8.0/CMSIS
 MCU_TYPE = EFM32GG11B420F2048GL112
 APP_ADDRESS = 0x00000000
 APP_NAME = liquid-dev-mcu
@@ -20,7 +20,7 @@ INCLUDEDIR = include
 STRUCT := $(shell find $(SOURCEDIR) -type d)
 
 SOURCEDIRSTRUCT := $(filter-out %/include, $(STRUCT))
-INCLUDEDIRSTRUCT := $(filter %/include, $(STRUCT)) $(DEVICEDIR)/Include $(COREDIR)/Include
+INCLUDEDIRSTRUCT := $(filter %/include, $(STRUCT)) $(DEVICEDIR)/Include $(COREDIR)/Core/Include $(COREDIR)/DSP/Include
 OBJECTDIRSTRUCT := $(subst $(SOURCEDIR), $(OBJECTDIR), $(SOURCEDIRSTRUCT))
 
 # Build type
